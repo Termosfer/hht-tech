@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Saytınızın xəritəsi (Sitemap) varsa, aşağıdakı sətri də əlavə edin:
+# Sitemap: https://hhtech.az/sitemap.xml
+
