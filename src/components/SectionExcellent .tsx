@@ -108,7 +108,7 @@ const SectionExcellent = () => {
           </motion.ul>
 
           <motion.div variants={itemVariants} className="mt-6">
-            <Link to="/haqqimizda" className="group w-24 h-24 sm:w-30 sm:h-30 rounded-full border border-gray-700 hover:border-[#CAFB42] text-3xl sm:text-4xl lg:text-5xl flex items-center justify-center transition-all duration-500 cursor-pointer bg-transparent hover:bg-[#CAFB42]/5">
+            <Link to="/haqqimizda" aria-label="Haqqımızda" className="group w-24 h-24 sm:w-30 sm:h-30 rounded-full border border-gray-700 hover:border-[#CAFB42] text-3xl sm:text-4xl lg:text-5xl flex items-center justify-center transition-all duration-500 cursor-pointer bg-transparent hover:bg-[#CAFB42]/5">
               <BsArrowUpRight className="text-[#CAFB42] transition-transform duration-500 group-hover:rotate-45" />
             </Link>
           </motion.div>
