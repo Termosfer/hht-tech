@@ -83,6 +83,7 @@ const FAQ = () => {
                   className="w-full border border-gray-800 transition-all duration-300"
                 >
                   <button
+                    aria-label="sualın cavabını açıb bağlamaq üçün"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className={`w-full p-6 md:p-8 flex items-center justify-between text-left cursor-pointer transition-all duration-500 group
                       ${isOpen ? "bg-[#CAFB42]" : "bg-transparent hover:bg-[#CAFB42]"}

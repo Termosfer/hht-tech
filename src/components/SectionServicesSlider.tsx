@@ -84,6 +84,7 @@ const SectionServicesSlider = () => {
 
   const renderButton = (item: (typeof services)[0]) => (
     <button
+     aria-label="Əvvəlki xidmətə keçmək üçün"
       key={item.id}
       onClick={() => setSelectedId(item.id)}
       className={`w-full text-left p-3 mb-2 rounded-lg transition-all duration-300 border border-white/5 

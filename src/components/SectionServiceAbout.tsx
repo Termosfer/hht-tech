@@ -42,6 +42,7 @@ const SectionServiceAbout = () => {
             {accordionData.map((item, index) => (
               <div key={index} className="border-b border-white/10">
                 <button
+                 aria-label="accordion başlığını açıb bağlamaq üçün"
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }

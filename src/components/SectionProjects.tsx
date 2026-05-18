@@ -4,13 +4,13 @@ import img2 from "../assets/3.jpg";
 import img3 from "../assets/rephile-water-8mpHMUsrYDo-unsplash.jpg";
 
 const SectionProjects = () => {
-  // SOL TƏRƏF ÜÇÜN: Soldan sağa açılma animasiyası
+ 
   const revealFromLeft: Variants = {
     hidden: {
       opacity: 0,
       scale: 0.5,
-      x: -100, // Soldan gəlir
-      clipPath: "inset(0% 100% 0% 0%)", // Maska solda bağlanır
+      x: -100, 
+      clipPath: "inset(0% 100% 0% 0%)", 
     },
     visible: {
       opacity: 1,
@@ -21,7 +21,7 @@ const SectionProjects = () => {
     },
   };
 
-  // SAĞ TƏRƏF ÜÇÜN: Sağdan sola açılma animasiyası (Olduğu kimi qaldı)
+  
   const revealFromRight: Variants = {
     hidden: {
       opacity: 0,
@@ -38,7 +38,7 @@ const SectionProjects = () => {
     },
   };
 
-  // YAZILAR VƏ DÜYMƏ ÜÇÜN: Aşağıdan yuxarı animasiya
+  
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -98,15 +98,6 @@ const SectionProjects = () => {
             </motion.div>
           </div>
 
-          {/* <motion.button
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="cursor-pointer bg-[#cafb42] text-sm text-[#141416] font-bold w-20 h-20 p-2 rounded-full hover:bg-white transition-colors duration-300"
-          >
-            BÜTÜN İŞLƏR
-          </motion.button> */}
         </div>
 
         <div className="flex flex-col gap-10 w-full lg:w-[40%] ">

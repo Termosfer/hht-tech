@@ -92,12 +92,12 @@ const brandsData = [
 const SectionPartners = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Border məntiqi (4 sütunlu grid üçün)
+  
   const getBorderClass = (index: number) => {
     let classes = "border-gray-800 ";
-    // Sütunlar: 0,1,2 - sağda xətt var | 3 - sağda yoxdur
+    
     if ((index + 1) % 4 !== 0) classes += "border-r ";
-    // Sətirlər: Son sətirdən başqa hər yerdə altta xətt var
+   
     if (index < 12) classes += "border-b ";
     return classes;
   };
@@ -108,7 +108,7 @@ const SectionPartners = () => {
        <div className="absolute top-1/2 right-0  w-50 h-50 bg-[#CAFB42]/20 blur-[120px] rounded-full pointer-events-none"></div>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
-          {/* 1. BAŞLIQ XANASI */}
+          
           <div
             className={`flex items-center justify-start p-10 min-h-40 ${getBorderClass(0)}`}
           >
@@ -118,7 +118,7 @@ const SectionPartners = () => {
             </h2>
           </div>
 
-          {/* 2-13. BREND LOQOLARI */}
+          
           {brandsData.map((brand, index) => (
             <motion.div
               key={index}
@@ -127,17 +127,13 @@ const SectionPartners = () => {
               <img
                 src={brand.logo}
                 alt={brand.name}
-                /* 
-         Loqonun öz rəngləri tünd fonda qarışıqlıq yaratmasın deyə:
-         - Başlanğıcda: grayscale (ağ-qara) və opacity-40
-         - Hover edəndə: tam rəngli (grayscale-0) və parlaq (opacity-100)
-      */
+                
                 className="max-h-12 w-auto object-contain filter  brightness-100 opacity-100  group-hover:brightness-100  transition-all duration-500 transform group-hover:scale-110"
               />
             </motion.div>
           ))}
 
-          {/* 14. DETALLAR ÜÇÜN KEÇİD */}
+          
           <div
             onClick={() => setIsModalOpen(true)}
             className={`flex items-center justify-center p-10 min-h-40 cursor-pointer group hover:bg-[#CAFB42] transition-all duration-500 ${getBorderClass(13)}`}
@@ -164,6 +160,7 @@ const SectionPartners = () => {
               className="bg-[#1a1a1c] w-full max-w-5xl max-h-[80vh] overflow-y-auto rounded-2xl border border-gray-800 p-8 md:p-12 relative"
             >
               <button
+               aria-label="modalu baglamaq uchun"
                 onClick={() => setIsModalOpen(false)}
                 className="cursor-pointer absolute top-6 right-6 text-white text-3xl hover:text-[#CAFB42]"
               >

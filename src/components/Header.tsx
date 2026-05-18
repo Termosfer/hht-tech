@@ -120,6 +120,7 @@ const Header = () => {
        
         <div className="lg:hidden">
           <button
+           aria-label="mobile menu achmaq uchun"
             onClick={() => setMobileMenuOpen(true)}
             className={`text-2xl transition-colors ${isScrolled ? "text-white" : "text-white"}`}
           >

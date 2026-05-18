@@ -106,6 +106,7 @@ const SectionReviews = () => {
 
           <div className="flex items-center justify-center lg:justify-start gap-4 mt-8 h-12">
             <button
+             aria-label="evvelki rəyə qayıtmaq üçün"
               onClick={prevReview}
               className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#CAFB42] hover:text-black hover:border-[#CAFB42] transition-all duration-300 cursor-pointer shrink-0 group"
             >
@@ -115,6 +116,7 @@ const SectionReviews = () => {
               />
             </button>
             <button
+              aria-label="sonrakı rəyə keçmək üçün"
               onClick={nextReview}
               className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-[#CAFB42] hover:text-black hover:border-[#CAFB42] transition-all duration-300 cursor-pointer shrink-0 group"
             >

@@ -38,6 +38,7 @@ const ScrollToTop = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={scrollToTop}
+             aria-label="scrollu yuxari aparmaq uchun"
             className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#CAFB42] text-black rounded-full shadow-[0_0_20px_rgba(202,251,66,0.3)] cursor-pointer overflow-hidden transition-colors hover:bg-white"
           >
           
