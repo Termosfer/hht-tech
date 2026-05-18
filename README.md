@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Hydro Heat Tech (HHT) - Rəsmi Vebsayt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Hydro Heat Tech (HHT)** — Azərbaycan Respublikasında sənaye və kommersiya obyektləri üçün nasos, istilik, su təchizatı və yanğın sistemləri sahəsində kompleks mühəndislik xidmətləri göstərən ixtisaslaşmış şirkətdir.
 
-Currently, two official plugins are available:
+Bu layihə şirkətin rəsmi vebsaytının müasir texnologiyalarla yığılmış Front-end hissəsidir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Texnoloji Yığın (Tech Stack)
 
-## React Compiler
+Layihə yüksək performans və istifadəçi təcrübəsi (UX) üçün aşağıdakı texnologiyalarla qurulub:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** [React 18](https://reactjs.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
 
-## Expanding the ESLint configuration
+## ✨ Əsas Özəlliklər
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dinamik Header:** Səhifə sürüşdürüldükdə (scroll) daralan, rəngi dəyişən və "Glassmorphism" effekti ilə bulanıqlaşan premium naviqasiya paneli.
+- **Dinamik Routing:** Bütün xidmətlər (`servicesData`) vahid bir şablon səhifə üzərindən dinamik olaraq render edilir.
+- **Animasiyalı Hero Section:** 3D "reveal" effekti ilə açılan romb formalı şəkil klasterləri.
+- **Sonsuz Marquee:** Şirkətin üstünlüklərini göstərən sonsuz sürüşən lent animasiyası.
+- **Responsiv Dizayn:** Mobil (iPhone/Android), Tablet (iPad Pro) və Masaüstü ekranlar üçün tam optimallaşdırılmış interfeys.
+- **SEO & Accessibility:** Lighthouse tərəfindən təsdiqlənmiş əlçatanlıq (aria-labels), meta-təsvirlər və düzgün başlıq iyerarxiyası.
+- **WhatsApp İnteqrasiyası:** Backend tələb olunmadan birbaşa müştəri müraciətləri üçün effektiv CTA düymələri.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Qovluq Strukturu
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+src/
+ ├── assets/          # Şəkillər, ikonlar və loqolar
+ ├── components/      # Təkrar istifadə edilə bilən UI komponentləri (Header, Footer, Stats və s.)
+ ├── data/            # Dinamik kontent (Xidmətlər siyahısı, rəylər, brendlər)
+ ├── pages/           # Əsas səhifələr (Home, About, Contact, FAQ, ServiceDetail)
+ ├── App.tsx          # Router və əsas struktur
+ └── main.tsx         # Giriş nöqtəsi
