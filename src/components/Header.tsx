@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { CiLocationOn, CiMail, CiPhone } from "react-icons/ci";
 import {
   FaFacebook,
@@ -18,33 +18,44 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "ANA SƏHİFƏ", path: "/" },
-    { name: "HAQQIMIZDA", path: "/haqqimizda" },
-    { name: "XİDMƏTLƏRİMİZ", path: "/xidmətlərimiz" },
-    { name: "FAQ", path: "/faq" },
-    { name: "ƏLAQƏ", path: "/əlaqə" },
-  ];
+  const navLinks = useMemo(
+    () => [
+      { name: "ANA SƏHİFƏ", path: "/" },
+      { name: "HAQQIMIZDA", path: "/haqqimizda" },
+      { name: "XİDMƏTLƏRİMİZ", path: "/xidmətlərimiz" },
+      { name: "FAQ", path: "/faq" },
+      { name: "ƏLAQƏ", path: "/əlaqə" },
+    ],
+    [],
+  );
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      <AnimatePresence>
+    <header className="fixed top-0 left-0 w-full z-50 pointer-events-none">
+      <AnimatePresence mode="wait">
         {!isScrolled && (
           <motion.div
-            initial={{ height: "auto", opacity: 1 }}
-            animate={{ height: "auto", opacity: 1 }}
+            key="top-bar"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 46, opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="hidden lg:block overflow-hidden bg-transparent border-b border-white/10"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="hidden lg:block overflow-hidden bg-transparent border-b border-white/10 pointer-events-auto will-change-[height,opacity]"
           >
-            <div className="w-full py-3 px-10 flex items-center justify-between text-sm text-white font-medium">
+            <div className="w-full h-11.5 px-10 flex items-center justify-between text-sm text-white font-medium">
               <div className="flex items-center gap-8">
                 <div className="flex items-center gap-2">
                   <CiLocationOn className="text-[#CAFB42] text-lg" />
@@ -52,7 +63,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <GoClock className="text-[#CAFB42] text-lg" />
-                  Bazar ertəsi - Cumə: 9:00 - 18:00
+                  9:00 - 18:00
                 </div>
                 <div className="flex items-center gap-2">
                   <CiPhone className="text-[#CAFB42] text-lg" />
@@ -78,38 +89,28 @@ const Header = () => {
 
       <motion.nav
         initial={false}
-        /*  animate={{
-          backgroundColor: isScrolled
-            ? "rgba(255, 255, 255, 0)"
-            : "rgba(255, 255, 255, 0)",
-          backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
-          height: isScrolled ? "75px" : "95px",
-          boxShadow: isScrolled ? "0 10px 30px rgba(0,0,0,0.4)" : "none",
-        }} */
         animate={{
-          // Mobildə bulanıqlığı (blur) sıfıra endirin, yalnız masaüstündə qalsın
-          backdropFilter: isScrolled
-            ? window.innerWidth < 768
-              ? "blur(0px)"
-              : "blur(12px)"
-            : "blur(0px)",
-          // Mobildə bulanıqlıq yerinə bir az daha tünd (az şəffaf) rəng verin ki, yazılar oxunsun
           backgroundColor: isScrolled
             ? window.innerWidth < 768
               ? "rgba(13, 13, 15, 0.98)"
-              : "rgba(13, 13, 15, 0.7)"
-            : "transparent",
-          height: isScrolled ? "70px" : "90px",
+              : "rgba(13, 13, 15, 0.8)"
+            : "rgba(13, 13, 15, 0)",
+          backdropFilter:
+            isScrolled && window.innerWidth >= 768 ? "blur(12px)" : "blur(0px)",
+          height: isScrolled ? 70 : 100,
         }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className="w-full py-12 px-6 lg:px-10 flex items-center justify-between "
+        transition={{ duration: 0.4, ease: "circOut" }}
+        className="w-full px-6 lg:px-10 flex items-center justify-between pointer-events-auto will-change-[height,backgroundColor] transform-gpu"
+        style={{ translateZ: 0 }}
       >
         <div className="shrink-0">
-          <img
-            src={logo}
-            alt="Logo"
-            className={`transition-allduration-400 ${isScrolled ? "h-20" : "h-20"}`}
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              className={`transition-all duration-500 ${isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"}`}
+            />
+          </Link>
         </div>
 
         <ul className="hidden lg:flex items-center gap-10">
@@ -117,9 +118,7 @@ const Header = () => {
             <li key={link.name}>
               <Link
                 to={link.path}
-                className={`text-sm font-bold tracking-widest transition-colors duration-300 hover:text-[#CAFB42] ${
-                  isScrolled ? "text-white" : "text-white"
-                }`}
+                className="text-sm font-bold tracking-widest transition-colors duration-300 hover:text-[#CAFB42] text-white"
               >
                 {link.name}
               </Link>
@@ -129,9 +128,9 @@ const Header = () => {
 
         <div className="lg:hidden">
           <button
-            aria-label="mobile menu achmaq uchun"
+            aria-label="Menu"
             onClick={() => setMobileMenuOpen(true)}
-            className={`text-2xl transition-colors ${isScrolled ? "text-white" : "text-white"}`}
+            className="text-2xl text-white p-2"
           >
             <FaBars />
           </button>
@@ -146,7 +145,7 @@ const Header = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-60"
+              className="fixed inset-0 bg-black/80 backdrop-blur-md z-60 pointer-events-auto cursor-pointer"
             />
 
             <motion.div
@@ -154,21 +153,24 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-screen w-75 bg-white z-70 p-10 shadow-2xl"
+              className="fixed top-0 right-0 h-screen w-72 bg-[#141416] z-70 p-10 shadow-2xl border-l border-white/5 pointer-events-auto"
             >
               <div className="flex justify-end mb-10">
-                <FaTimes
-                  className="text-3xl text-slate-900 cursor-pointer"
+                <button
                   onClick={() => setMobileMenuOpen(false)}
-                />
+                  className="text-3xl text-white cursor-pointer hover:text-[#CAFB42] p-2"
+                >
+                  <FaTimes />
+                </button>
               </div>
-              <ul className="flex flex-col gap-8">
+
+              <ul className="flex flex-col gap-6">
                 {navLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-xl font-bold text-slate-900 hover:text-[#CAFB42] transition"
+                      className="text-xl font-bold text-white hover:text-[#CAFB42] transition-colors block py-2"
                     >
                       {link.name}
                     </Link>
