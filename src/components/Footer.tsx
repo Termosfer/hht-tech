@@ -164,21 +164,21 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ALT COPYRIGHT HİSSƏSİ */}
+        
         <div className="mt-20 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-[10px] md:text-xs tracking-[0.2em] text-center uppercase font-bold">
           <p>© {currentYear} HYDRO HEAT TECH (HHT). Bütün hüquqlar qorunur.</p>
           <div className="flex gap-6">
             <Link
-              to="/privacy"
+              to="/məxfilik-siyasəti"
               className="hover:text-[#CAFB42] transition-colors"
             >
-              Privacy Policy
+              Məxfilik Siyasəti
             </Link>
             <Link
-              to="/terms"
+              to="/şərtlər"
               className="hover:text-[#CAFB42] transition-colors"
             >
-              Terms of Service
+              Şərtlər
             </Link>
           </div>
         </div>

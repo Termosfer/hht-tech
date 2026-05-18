@@ -12,6 +12,7 @@ import img3 from "../assets/3.jpg";
 import img4 from "../assets/4.webp";
 import { Link } from "react-router";
 import SectionChunke from "../components/SectionChunke";
+import SectionClients from "../components/SectionClients";
 const Home = () => {
   const rhombClip = { clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" };
 
@@ -172,6 +173,7 @@ const Home = () => {
       <SectionProjects />
       <SectionPartners />
       <SectionChunke/>
+      <SectionClients/>
       <SectionExperience />
       <SectionReviews />
     </div>

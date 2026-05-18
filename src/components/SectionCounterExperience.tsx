@@ -13,12 +13,12 @@ const RandomOutlineCounter = ({ target, duration = 2000 }: CounterProps) => {
 
   useEffect(() => {
     const startTime = Date.now();
-    const frameRate = 80; // Sürəti bir az artırdıq ki, daha canlı görünsün
+    const frameRate = 80; 
 
     const interval = setInterval(() => {
       const elapsedTime = Date.now() - startTime;
       if (elapsedTime < duration) {
-        // Hədəf rəqəmə yaxın random rəqəmlər
+        
         setCount(Math.floor(Math.random() * (finalValue * 1.1)));
       } else {
         setCount(finalValue);
@@ -45,10 +45,10 @@ const RandomOutlineCounter = ({ target, duration = 2000 }: CounterProps) => {
 
 const SectionCounterExperience = () => {
   const stats = [
-    { number: "148+", label: "Tamamlanmış Layihə" },
-    { number: "12+", label: "Premium Brend" },
-    { number: "3+", label: "İllik Təcrübə" },
-    { number: "1", label: "Rəsmi Nümayəndəlik" },
+    { label: "Ümumi Müştəri", value: "148+" },
+    { label: "Dövlət Qurumları", value: "12+" },
+    { label: "Kommersiya", value: "80+" },
+    { label: "Sənaye", value: "30+" },
   ];
 
   return (
@@ -65,7 +65,7 @@ const SectionCounterExperience = () => {
               className="relative flex items-center h-32 md:h-40 group"
             >
               <div className="text-7xl sm:text-8xl md:text-9xl lg:text-7xl xl:text-[110px] 2xl:text-[130px] font-black leading-none select-none transition-transform duration-500 group-hover:scale-105 origin-left">
-                <RandomOutlineCounter target={stat.number} />
+                <RandomOutlineCounter target={stat.value} />
               </div>
 
               <div className="absolute left-12 sm:left-16 md:left-20 lg:left-14 xl:left-20 2xl:left-24 z-10">

@@ -7,6 +7,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   return (
@@ -15,10 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/haqqimizda" element={<About />} />
         <Route path="/xidmətlərimiz" element={<Services />} />
-
         <Route path="/faq" element={<FAQ />} />
         <Route path="/əlaqə" element={<Contact />} />
-
+        <Route path="/məxfilik-siyasəti" element={<PrivacyPolicy />} />
+        <Route path="/şərtlər" element={<TermsOfService />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

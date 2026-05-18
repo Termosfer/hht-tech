@@ -73,10 +73,10 @@ const SectionChunke = () => {
             
             variants={revealFromLeft}
           >
-            <span className="text-[#CAFB42] font-bold tracking-[0.3em] uppercase text-xs">
+            <span className="text-[#CAFB42] font-bold tracking-[0.3em] uppercase text-sm">
               RƏSMİ NÜMAYƏNDƏLİK
             </span>
-            <h2 className="text-white text-5xl md:text-7xl font-black mt-4 mb-8">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-4xl  lg:text-4xl xl:text-5xl font-black mt-4 mb-8">
               CHUNKE <span className="text-blue-500">HB</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-10">

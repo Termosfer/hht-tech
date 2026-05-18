@@ -4,17 +4,17 @@ import img1 from "../assets/14...png";
 import { Link } from "react-router";
 
 const SectionExcellent = () => {
-  // Bükülü vərəq (unfolding paper) animasiyası
+  
   const paperUnfoldVariants: Variants = {
     hidden: {
       opacity: 0,
-      rotateY: -90, // 90 dərəcə bükülü
-      transformOrigin: "left", // Soldan sağa doğru açılır
+      rotateY: -90, 
+      transformOrigin: "left", 
       perspective: 1000,
     },
     visible: {
       opacity: 1,
-      rotateY: 0, // Tam açılmış vəziyyət
+      rotateY: 0, 
       transition: { duration: 1.2, ease: "easeOut" },
     },
   };
