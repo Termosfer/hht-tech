@@ -16,10 +16,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FaFacebookF />, link: "#" },
-    { icon: <FaInstagram />, link: "#" },
-    { icon: <FaLinkedinIn />, link: "#" },
-    { icon: <FaYoutube />, link: "#" },
+    { icon: <FaFacebookF />, link: "#", label: "Facebook səhifəmiz" },
+  { icon: <FaInstagram />, link: "#", label: "Instagram səhifəmiz" },
+  { icon: <FaLinkedinIn />, link: "#", label: "Linkedin profilimiz" },
+  { icon: <FaYoutube />, link: "#", label: "Youtube kanalımız" },
   ];
 
   return (
@@ -45,6 +45,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href={social.link}
+                   aria-label={social.label} 
                   className="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#CAFB42] hover:text-black hover:border-[#CAFB42] transition-all duration-300"
                 >
                   {social.icon}
