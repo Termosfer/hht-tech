@@ -19,7 +19,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-     
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +35,6 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-    
       <AnimatePresence>
         {!isScrolled && (
           <motion.div
@@ -58,7 +56,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CiPhone className="text-[#CAFB42] text-lg" />
-                  +994 51 948 79 09 
+                  +994 51 948 79 09
                 </div>
               </div>
               <div className="flex items-center gap-6">
@@ -78,21 +76,34 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      
       <motion.nav
         initial={false}
-        animate={{
+        /*  animate={{
           backgroundColor: isScrolled
             ? "rgba(255, 255, 255, 0)"
             : "rgba(255, 255, 255, 0)",
           backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
           height: isScrolled ? "75px" : "95px",
           boxShadow: isScrolled ? "0 10px 30px rgba(0,0,0,0.4)" : "none",
+        }} */
+        animate={{
+          // Mobildə bulanıqlığı (blur) sıfıra endirin, yalnız masaüstündə qalsın
+          backdropFilter: isScrolled
+            ? window.innerWidth < 768
+              ? "blur(0px)"
+              : "blur(12px)"
+            : "blur(0px)",
+          // Mobildə bulanıqlıq yerinə bir az daha tünd (az şəffaf) rəng verin ki, yazılar oxunsun
+          backgroundColor: isScrolled
+            ? window.innerWidth < 768
+              ? "rgba(13, 13, 15, 0.98)"
+              : "rgba(13, 13, 15, 0.7)"
+            : "transparent",
+          height: isScrolled ? "70px" : "90px",
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="w-full py-12 px-6 lg:px-10 flex items-center justify-between "
       >
-       
         <div className="shrink-0">
           <img
             src={logo}
@@ -101,7 +112,6 @@ const Header = () => {
           />
         </div>
 
-        
         <ul className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             <li key={link.name}>
@@ -117,10 +127,9 @@ const Header = () => {
           ))}
         </ul>
 
-       
         <div className="lg:hidden">
           <button
-           aria-label="mobile menu achmaq uchun"
+            aria-label="mobile menu achmaq uchun"
             onClick={() => setMobileMenuOpen(true)}
             className={`text-2xl transition-colors ${isScrolled ? "text-white" : "text-white"}`}
           >
@@ -129,11 +138,9 @@ const Header = () => {
         </div>
       </motion.nav>
 
-      
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-          
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -141,7 +148,7 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-60"
             />
-            
+
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
