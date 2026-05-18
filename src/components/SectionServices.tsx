@@ -48,7 +48,7 @@ const SectionServices = () => {
 
   return (
     <div className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-      {/* Estetik Arxa Fon Glow (İstəyə bağlı) */}
+      
       <div className="absolute top-1/2 left-[30%] w-72 h-72 bg-[#CAFB42] opacity-5 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16">

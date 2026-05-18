@@ -18,7 +18,7 @@ const SectionChunke = () => {
   const revealFromRight: Variants = {
     hidden: {
       opacity: 0,
-      scale: 0.8,
+      scale: 0.5,
       x: 100,
       clipPath: "inset(0% 0% 0% 100%)",
     },
@@ -27,7 +27,7 @@ const SectionChunke = () => {
       scale: 1,
       x: 0,
       clipPath: "inset(0% 0% 0% 0%)",
-      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 },
+      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 },
     },
   };
 
