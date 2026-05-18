@@ -137,7 +137,7 @@ const Footer = () => {
               </li>
               <li className="flex flex-col lg:flex-row items-center lg:items-start gap-3">
                 <HiOutlinePhone className="text-[#CAFB42] text-xl shrink-0" />
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                   <a
                     href="tel:+994501234567"
                     className="hover:text-white transition-colors"
