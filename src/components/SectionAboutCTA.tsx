@@ -5,7 +5,7 @@ import serviceImg from "../../public/service_img1-1024x729.jpg"; // Şəkil yolu
 const SectionAboutCTA = () => {
   return (
     <section className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-      <div className="absolute top-0 right-0 w-100 h-100 bg-[#CAFB42] opacity-[0.02] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-100 h-100 bg-[#CAFB42] opacity-[0.02] blur-2xl lg:blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch">
         <motion.div

@@ -11,7 +11,7 @@ const PageHeader = ({ title, currentPage }: PageHeaderProps) => {
   return (
     <section className="relative bg-[url('/titlebar.jpg')] py-20 md:pt-58 text-center overflow-hidden border-b border-white/5">
       
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#CAFB42] opacity-[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#CAFB42] opacity-[0.03] blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 container mx-auto px-4">
        

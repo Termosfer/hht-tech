@@ -51,7 +51,7 @@ const SectionChunke = () => {
 
   return (
     <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden border-t border-white/5">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#CAFB42]/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#CAFB42]/10 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">

@@ -96,7 +96,7 @@ const SectionServicesSlider = () => {
 
   return (
     <section className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-      <div className="absolute top-40 right-0 w-100 h-100 bg-[#CAFB42] opacity-[0.10] blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-40 right-0 w-100 h-100 bg-[#CAFB42] opacity-[0.10] blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-white text-center text-4xl font-bold mb-16">
           Bütün Xidmətlərimiz

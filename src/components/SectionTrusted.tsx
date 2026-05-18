@@ -4,7 +4,7 @@ import SkillBar from "./SkillBar";
 const SectionTrusted = () => {
   return (
     <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden">
-      <div className="absolute top-0 right-0 w-125 h-125 bg-[#CAFB42] opacity-[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-125 h-125 bg-[#CAFB42] opacity-[0.03] blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between gap-16">
         <div className="w-full lg:w-1/2">

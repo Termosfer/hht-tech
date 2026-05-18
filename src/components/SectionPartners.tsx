@@ -104,8 +104,8 @@ const SectionPartners = () => {
 
   return (
     <div className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-       <div className="absolute bottom-1/2 left-0  w-50 h-50 bg-[#CAFB42]/20 blur-[120px] rounded-full pointer-events-none"></div>
-       <div className="absolute top-1/2 right-0  w-50 h-50 bg-[#CAFB42]/20 blur-[120px] rounded-full pointer-events-none"></div>
+       <div className="absolute bottom-1/2 left-0  w-50 h-50 bg-[#CAFB42]/20 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
+       <div className="absolute top-1/2 right-0  w-50 h-50 bg-[#CAFB42]/20 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ">
           

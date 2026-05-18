@@ -41,7 +41,7 @@ const SectionExcellent = () => {
 
   return (
     <div className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-      <div className="absolute top-[-10%] right-[-10%] w-60 h-60 md:w-100 md:h-100 bg-[#CAFB42] opacity-10 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-[-10%] right-[-10%] w-60 h-60 md:w-100 md:h-100 bg-[#CAFB42] opacity-10 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
         <motion.div

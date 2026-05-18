@@ -25,7 +25,7 @@ const SectionServiceAbout = () => {
 
   return (
     <section className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-10 overflow-hidden">
-      <div className="absolute top-1/4 left-[10%] w-96 h-96 bg-[#CAFB42] opacity-5 blur-[130px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/4 left-[10%] w-96 h-96 bg-[#CAFB42] opacity-5 blur-2xl lg:blur-[130px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="w-full lg:w-1/2">

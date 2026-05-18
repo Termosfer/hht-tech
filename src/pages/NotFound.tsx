@@ -5,8 +5,8 @@ import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 const NotFound = () => {
   return (
     <div className="relative min-h-screen bg-[#0d0d0f] flex items-center justify-center overflow-hidden px-6">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#CAFB42] opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-5%] w-64 h-64 bg-[#CAFB42] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-[#CAFB42] opacity-[0.05] blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-5%] w-64 h-64 bg-[#CAFB42] opacity-[0.03] blur-2xl lg:blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10 max-w-4xl w-full text-center">
         <motion.div

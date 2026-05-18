@@ -60,7 +60,7 @@ const SectionClients = () => {
   return (
     <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden">
       {/* Glow Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#CAFB42]/5 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-[#CAFB42]/5  blur-2xl lg:blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">

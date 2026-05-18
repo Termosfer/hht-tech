@@ -14,7 +14,7 @@ const SkillBar = ({ title, percentage }: SkillBarProps) => {
         </span>
         <span className="text-white text-sm font-bold">{percentage}%</span>
       </div>
-      <div className="relative w-full h-[2px] bg-white/10 overflow-hidden">
+      <div className="relative w-full h-0.5 bg-white/10 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${percentage}%` }}
