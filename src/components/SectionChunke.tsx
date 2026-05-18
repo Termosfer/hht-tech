@@ -3,38 +3,32 @@ import { FiCheckCircle } from "react-icons/fi";
 import img from "../assets/water-treatment-solutions-company-3-1024x585.jpg";
 
 const SectionChunke = () => {
-  // Soldan sağa açılma animasiyası (Yazılar üçün)
-  const revealFromLeft: Variants = {
-    hidden: { 
+  const fadeInUp: Variants = {
+    hidden: {
       opacity: 0,
-      scale: 0.8,
-      x: -100,
-      clipPath: "inset(0% 100% 0% 0%)", // Maska solda bağlıdır
+      y: 50,
     },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      x: 0,
-      clipPath: "inset(0% 0% 0% 0%)", // Maska tam açılır
-      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 } 
-    }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.1 },
+    },
   };
 
-  // Sağdan sola açılma animasiyası (Şəkil üçün)
   const revealFromRight: Variants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       scale: 0.8,
       x: 100,
-      clipPath: "inset(0% 0% 0% 100%)", // Maska sağda bağlıdır
+      clipPath: "inset(0% 0% 0% 100%)",
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       x: 0,
-      clipPath: "inset(0% 0% 0% 0%)", // Maska tam açılır
-      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 } 
-    }
+      clipPath: "inset(0% 0% 0% 0%)",
+      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.3 },
+    },
   };
 
   const usageAreas = [
@@ -56,27 +50,22 @@ const SectionChunke = () => {
   ];
 
   return (
-    <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden">
-      {/* Background Glow */}
+    <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden border-t border-white/5">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-[#CAFB42]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
-        {/* ÜST HİSSƏ: REVEAL ANIMASIYALI TANITIM */}
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
-          
-          {/* SOL TƏRƏF: MƏTN (revealFromLeft) */}
-          <motion.div 
+          <motion.div
             className="w-full lg:w-1/2"
             initial="hidden"
             whileInView="visible"
-            
-            variants={revealFromLeft}
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
           >
             <span className="text-[#CAFB42] font-bold tracking-[0.3em] uppercase text-sm">
               RƏSMİ NÜMAYƏNDƏLİK
             </span>
-            <h2 className="text-white text-3xl sm:text-4xl md:text-4xl  lg:text-4xl xl:text-5xl font-black mt-4 mb-8">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-black mt-4 mb-8">
               CHUNKE <span className="text-blue-500">HB</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-10">
@@ -88,7 +77,10 @@ const SectionChunke = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {usageAreas.map((area, index) => (
-                <div key={index} className="flex items-center gap-3 text-gray-400 group">
+                <div
+                  key={index}
+                  className="flex items-center gap-3 text-gray-400 group"
+                >
                   <FiCheckCircle className="text-[#CAFB42] shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium">{area}</span>
                 </div>
@@ -96,12 +88,10 @@ const SectionChunke = () => {
             </div>
           </motion.div>
 
-          {/* SAĞ TƏRƏF: ŞƏKİL (revealFromRight) */}
           <motion.div
             className="w-full lg:w-1/2"
             initial="hidden"
             whileInView="visible"
-            
             variants={revealFromRight}
           >
             <div className="relative group overflow-hidden rounded-2xl border border-white/5 shadow-2xl">
@@ -115,7 +105,6 @@ const SectionChunke = () => {
           </motion.div>
         </div>
 
-        {/* ALT HİSSƏ: DALĞALI PROSES (Mövcud stiliniz qorundu) */}
         <div className="pt-16 border-t border-white/5">
           <h3 className="text-white text-2xl md:text-3xl font-bold mb-16 text-center uppercase tracking-widest">
             Su Təmizləmə <span className="text-[#CAFB42]">Prosesi</span>
@@ -128,15 +117,15 @@ const SectionChunke = () => {
               <motion.div
                 key={step.id}
                 initial={{ opacity: 0, y: 50 }}
-                whileInView={{ 
-                  opacity: 1, 
-                  y: index % 2 === 0 ? 0 : 40 
+                whileInView={{
+                  opacity: 1,
+                  y: index % 2 === 0 ? 0 : 40,
                 }}
                 viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: index * 0.2,
-                  ease: "easeOut" 
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.1,
+                  ease: "easeOut",
                 }}
                 className={`relative z-10 flex flex-col items-center text-center group`}
               >
@@ -157,8 +146,15 @@ const SectionChunke = () => {
 
                 {index !== processSteps.length - 1 && (
                   <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 opacity-20">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#CAFB42" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#CAFB42"
+                      strokeWidth="2"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
                 )}

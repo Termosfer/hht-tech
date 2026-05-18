@@ -78,7 +78,7 @@ const SectionServicesSlider = () => {
   const [selectedId, setSelectedId] = useState<number>(1);
   const activeService = services.find((s) => s.id === selectedId);
 
-  // Siyahını 2-yə bölürük
+
   const leftSide = services.slice(0, 7);
   const rightSide = services.slice(7, 14);
 
@@ -102,7 +102,7 @@ const SectionServicesSlider = () => {
           Bütün Xidmətlərimiz
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">{leftSide.map(renderButton)}</div>
 
           <div className="lg:col-span-2 bg-[#1c1c1f] p-8 rounded-2xl border border-white/10 flex flex-col justify-center min-h-100">
