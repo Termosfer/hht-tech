@@ -66,12 +66,12 @@ const SectionExcellent = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textContainerVariants}
         >
-          <motion.h4
+          <motion.span
             variants={itemVariants}
             className="text-[#CAFB42] font-bold tracking-[0.2em] text-sm uppercase"
           >
             PEŞƏKAR MÜHƏNDİSLİK TƏCRÜBƏSİ
-          </motion.h4>
+          </motion.span>
 
           <motion.h2
             variants={itemVariants}

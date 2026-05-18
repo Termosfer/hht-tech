@@ -47,6 +47,7 @@ const Contact = () => {
                   <FaYoutube />,
                 ].map((icon, index) => (
                   <a
+                    aria-label="Xidmətlər haqqında ətraflı məlumat"
                     key={index}
                     href="#"
                     className="w-12 h-12 rounded-full text-white border border-white flex items-center justify-center hover:bg-[#CAFB42] hover:text-black transition-all"

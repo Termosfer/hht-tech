@@ -33,9 +33,9 @@ const SectionAboutCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h4 className="text-[#CAFB42] font-bold text-sm tracking-[0.2em] uppercase mb-6">
+            <span className="text-[#CAFB42] font-bold text-sm tracking-[0.2em] uppercase mb-6">
               BİZİM XİDMƏTLƏR
-            </h4>
+            </span>
             <h2 className="text-white text-3xl sm:text-4xl md:text-4xl  lg:text-4xl xl:text-5xl font-bold leading-[1.1] mb-12">
               Bizdən nə əldə <br /> edəcəksiniz?
             </h2>

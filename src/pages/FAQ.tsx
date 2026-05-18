@@ -47,13 +47,13 @@ const FAQ = () => {
       <section className="relative py-16 md:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center text-center mb-16">
-            <motion.h4
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               className="text-[#CAFB42] font-bold tracking-[0.3em] uppercase text-sm mb-4"
             >
               Kömək Lazımdır?
-            </motion.h4>
+            </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

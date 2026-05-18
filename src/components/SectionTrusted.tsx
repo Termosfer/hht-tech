@@ -8,14 +8,14 @@ const SectionTrusted = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-center justify-between gap-16">
         <div className="w-full lg:w-1/2">
-          <motion.h4
+          <motion.span
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="text-[#CAFB42] font-bold text-sm tracking-[0.2em] uppercase mb-6"
           >
             Etibarlı Təcrübə
-          </motion.h4>
+          </motion.span>
 
           <motion.h2
             initial={{ opacity: 0, x: -30 }}
