@@ -112,7 +112,7 @@ const SectionClients = () => {
                 {cat.list.map((client, i) => (
                   <li
                     key={i}
-                    className="text-gray-500 text-sm flex items-start gap-2 hover:text-white transition-colors cursor-default"
+                    className="text-gray-300 text-sm flex items-start gap-2 hover:text-white transition-colors cursor-default"
                   >
                     <span className="text-[#CAFB42] mt-1.5 w-1.5 h-1.5 rounded-full bg-[#CAFB42] shrink-0" />
                     {client}
@@ -126,7 +126,7 @@ const SectionClients = () => {
         <div className="mt-16 pt-10 border-t border-white/5 flex flex-wrap justify-center gap-10 md:gap-20 text-center">
           <div>
             <p className="text-[#CAFB42] text-3xl font-black italic">148+</p>
-            <p className="text-gray-500 text-xs uppercase tracking-widest mt-1">
+            <p className="text-gray-300 text-xs uppercase tracking-widest mt-1">
               Ümumi Müştəri
             </p>
           </div>
@@ -134,7 +134,7 @@ const SectionClients = () => {
             <p className="text-white text-3xl font-black italic text-opacity-80">
               12+
             </p>
-            <p className="text-gray-500 text-xs uppercase tracking-widest mt-1">
+            <p className="text-gray-300 text-xs uppercase tracking-widest mt-1">
               Dövlət Qurumu
             </p>
           </div>
@@ -142,7 +142,7 @@ const SectionClients = () => {
             <p className="text-white text-3xl font-black italic text-opacity-80">
               80+
             </p>
-            <p className="text-gray-500 text-xs uppercase tracking-widest mt-1">
+            <p className="text-gray-300 text-xs uppercase tracking-widest mt-1">
               Kommersiya Obyekti
             </p>
           </div>
@@ -150,7 +150,7 @@ const SectionClients = () => {
             <p className="text-white text-3xl font-black italic text-opacity-80">
               30+
             </p>
-            <p className="text-gray-500 text-xs uppercase tracking-widest mt-1">
+            <p className="text-gray-300 text-xs uppercase tracking-widest mt-1">
               Sənaye Müəssisəsi
             </p>
           </div>

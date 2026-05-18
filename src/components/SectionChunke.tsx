@@ -150,7 +150,7 @@ const SectionChunke = () => {
                   <h4 className="text-white font-bold text-lg mb-2 group-hover:text-[#CAFB42] transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-gray-500 text-xs leading-relaxed max-w-37.5">
+                  <p className="text-gray-300 text-xs leading-relaxed max-w-37.5">
                     {step.desc}
                   </p>
                 </div>

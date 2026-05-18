@@ -166,7 +166,7 @@ const Footer = () => {
         </div>
 
         
-        <div className="mt-20 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-[10px] md:text-xs tracking-[0.2em] text-center uppercase font-bold">
+        <div className="mt-20 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-300 text-[10px] md:text-xs tracking-[0.2em] text-center uppercase font-bold">
           <p>© {currentYear} HYDRO HEAT TECH (HHT). Bütün hüquqlar qorunur.</p>
           <div className="flex gap-6">
             <Link

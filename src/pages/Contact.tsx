@@ -91,7 +91,7 @@ const Contact = () => {
 
                 <div className="w-full h-px bg-white/10 my-8"></div>
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 max-w-55">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-55">
                   Texniki dəstək və konsultasiya üçün müraciət edin.
                 </p>
                 <p className="text-white text-sm font-bold tracking-wide">
@@ -116,7 +116,7 @@ const Contact = () => {
 
                 <div className="w-full h-px bg-white/10 my-8"></div>
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 max-w-55">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-55">
                   Layihə və kommersiya təklifləri üçün bizə yazın.
                 </p>
                 <p className="text-white text-sm font-bold tracking-wide">
@@ -148,7 +148,7 @@ const Contact = () => {
             </div>
 
             <div className="md:w-1/3 flex flex-col items-center md:items-end">
-              <p className="text-gray-500 text-center md:text-right mb-8 italic text-sm">
+              <p className="text-gray-300 text-center md:text-right mb-8 italic text-sm">
                 Sürətli əlaqə və təklif üçün WhatsApp vasitəsilə də yaza
                 bilərsiniz.
               </p>
