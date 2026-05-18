@@ -46,7 +46,7 @@ const SectionReviews = () => {
     <section className="relative bg-[#141416] py-16 md:py-24 lg:py-32 px-6 overflow-hidden border-t border-white/5">
       <div className="absolute top-0 right-0 w-80 h-80 md:w-150 md:h-150 bg-[#CAFB42]/10 blur-2xl lg:blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-14 lg:gap-16">
        
         <div className="relative shrink-0">
           <div className="w-64 h-64 sm:w-80 sm:h-80 xl:w-100 xl:h-100 rounded-full overflow-hidden border-2 border-white/10 shadow-2xl relative z-10">
