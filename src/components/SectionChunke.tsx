@@ -50,7 +50,7 @@ const SectionChunke = () => {
   ];
 
   return (
-    <section className="relative bg-[#141416] py-20 lg:py-32 px-6 overflow-hidden border-t border-white/5">
+    <section className="relative bg-[#141416] py-20 px-4 sm:px-6 md:px-10 overflow-hidden border-t border-white/5">
      
 
       <div className="max-w-7xl mx-auto relative z-10">

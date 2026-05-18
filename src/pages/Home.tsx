@@ -14,22 +14,22 @@ import { Link } from "react-router";
 import SectionChunke from "../components/SectionChunke";
 import SectionClients from "../components/SectionClients";
 const Home = () => {
-  const rhombClip = { clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" };
+ const rhombClip = { clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" };
 
   const textFadeIn: Variants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, y: 20 }, 
     visible: (delay: number) => ({
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: { duration: 0.8, delay: delay, ease: "easeOut" },
     }),
   };
 
   const anim = {
-    top: { initial: { opacity: 0, y: -100 }, animate: { opacity: 1, y: 0 } },
-    bottom: { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } },
-    left: { initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } },
-    right: { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } },
+    top: { initial: { opacity: 0, y: -50 }, animate: { opacity: 1, y: 0 } },
+    bottom: { initial: { opacity: 0, y: 50 }, animate: { opacity: 1, y: 0 } },
+    left: { initial: { opacity: 0, x: -50 }, animate: { opacity: 1, x: 0 } },
+    right: { initial: { opacity: 0, x: 50 }, animate: { opacity: 1, x: 0 } },
   };
 
   return (
@@ -37,12 +37,11 @@ const Home = () => {
       <div className="relative min-h-screen w-full bg-[url('/section1-bg.jpg')] bg-cover bg-center overflow-hidden flex items-center">
         <motion.div
           animate={{
-            x: [0, 20, -10, 0],
-            y: [0, -30, 10, 0],
-            rotate: [0, 5, -5, 0],
+            x: [0, 15, -10, 0],
+            y: [0, -20, 10, 0],
           }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 bg-[url('/round-shape-bg.png')] bg-no-repeat bg-center opacity-20 lg:opacity-40 z-0"
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 bg-[url('/round-shape-bg.png')] bg-no-repeat bg-center opacity-20 lg:opacity-40 z-0 transform-gpu will-change-transform"
         />
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full w-full px-6 md:px-12 lg:px-16 xl:px-20 pt-20 lg:pt-30">
@@ -108,11 +107,11 @@ const Home = () => {
           <div className="hidden lg:flex w-[35%] xl:w-[45%] justify-end items-center origin-right">
             <div className="relative w-75 h-75 xl:w-100 xl:h-100 2xl:w-112.5 2xl:h-112.5">
               <motion.div
-                initial={anim.top.initial}
+               initial={anim.top.initial}
                 animate={anim.top.animate}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl z-10"
-                style={rhombClip}
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl  will-change-transform"
+               style={{ ...rhombClip, translateZ: 0 }}
               >
                 <img
                   src={img1}
@@ -125,7 +124,7 @@ const Home = () => {
                 initial={anim.left.initial}
                 animate={anim.left.animate}
                 transition={{ duration: 0.8, delay: 1.4 }}
-                className="absolute top-1/4 left-0 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl"
+                className="absolute top-1/4 left-0 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl will-change-transform"
                 style={rhombClip}
               >
                 <img
@@ -139,8 +138,8 @@ const Home = () => {
                 initial={anim.right.initial}
                 animate={anim.right.animate}
                 transition={{ duration: 0.8, delay: 1.6 }}
-                className="absolute top-1/4 right-0 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl"
-                style={rhombClip}
+                className="absolute top-1/4 right-0 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl will-change-transform"
+                style={{ ...rhombClip, translateZ: 0 }}
               >
                 <img
                   src={img4}
@@ -153,8 +152,8 @@ const Home = () => {
                 initial={anim.bottom.initial}
                 animate={anim.bottom.animate}
                 transition={{ duration: 0.8, delay: 1.8 }}
-                className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl"
-                style={rhombClip}
+                className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-32 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 bg-zinc-800 border border-[#CAFB42]/40 overflow-hidden shadow-2xl will-change-transform"
+                style={{ ...rhombClip, translateZ: 0 }}
               >
                 <img
                   src={img2}
